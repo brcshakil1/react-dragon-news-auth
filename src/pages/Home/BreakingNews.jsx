@@ -5,7 +5,7 @@ const BreakingNews = () => {
   return (
     <div className="flex">
       <button className="btn btn-secondary">Breaking News</button>
-      <Marquee pauseOnHover speed={200}>
+      <Marquee pauseOnHover speed={100}>
         <Link className="pr-4" to="/">
           I can be a React component, multiple React components, or just some
           text.

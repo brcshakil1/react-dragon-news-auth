@@ -1,15 +1,16 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import userDefault from "../../../assets/user.png";
 
 const Navbar = () => {
   const navLinks = (
     <>
-      <li>
+      <li className="pr-1">
         <NavLink to="/">Home</NavLink>
       </li>
-      <li>
+      <li className="pr-1">
         <NavLink to="/about">About</NavLink>
       </li>
-      <li>
+      <li className="pr-1">
         <NavLink to="/career">Career</NavLink>
       </li>
     </>
@@ -46,7 +47,15 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+          <div className="w-10 rounded-full">
+            <img src={userDefault} alt="" />
+          </div>
+        </label>
+
+        <button className="btn px-5 py-2">
+          <Link to="/">Login</Link>
+        </button>
       </div>
     </div>
   );
